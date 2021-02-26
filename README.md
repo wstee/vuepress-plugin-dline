@@ -18,8 +18,4 @@ module.exports = {
   ]
 }
 
-<<<<<<< HEAD
 ```
-=======
-```
->>>>>>> 637156cc4acfc49d4d572d0aa24b1b9cf0654c05
