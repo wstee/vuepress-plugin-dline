@@ -1,6 +1,6 @@
-import LineBg from './LineBg.vue'
+import DLine from './DLine.vue'
 
 export default ({ Vue }) => {
   // eslint-disable-next-line vue/match-component-file-name
-  Vue.component('LineBg', LineBg)
+  Vue.component('DLine', DLine)
 }

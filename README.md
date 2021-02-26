@@ -1,13 +1,13 @@
-# vuepress-plugin-linebg
+# vuepress-plugin-dline
 ## 安装
-``npm i vuepress-plugin-linebg -D``
+``npm i vuepress-plugin-dline -D``
 ## 使用
 ```js
 // docs/.vuepres/config.js
 module.exports = {
   plugins: [
     [
-      'linebg',
+      'dline',
       {
         zIndex: -1, // 背景层级
         opacity: .9, // 背景透明度

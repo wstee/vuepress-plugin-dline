@@ -1,6 +1,6 @@
 {
-  "name": "vuepress-plugin-linebg",
-  "version": "1.0.1",
+  "name": "vuepress-plugin-dline",
+  "version": "1.0.0",
   "description": "vuepress-theme-plugin",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laobg/vuepress-plugin-linebg.git"
+    "url": "git+https://github.com/laobg/vuepress-plugin-dline.git"
   },
   "author": "wst <stwangcq@163.com>",
   "license": "ISC"

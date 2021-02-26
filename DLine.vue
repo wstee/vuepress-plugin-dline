@@ -1,18 +1,18 @@
 <template>
   <transition name="fade">
-    <canvas id="lineBg" class="line-bg"></canvas>
+    <canvas id="DLine" class="line-bg"></canvas>
   </transition>
 </template>
 <script>
 export default {
-  name: 'LineBg',
+  name: 'DLine',
   data() {
     return {
       ...LB_OPTIONS
     }
   },
   mounted () {
-    let winWidth, winHeight, u, s = [], oCanvas = document.getElementById("lineBg"),
+    let winWidth, winHeight, u, s = [], oCanvas = document.getElementById("DLine"),
       zIndex = this.zIndex,
       opacity = this.opacity,
       color = this.color,

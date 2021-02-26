@@ -37,6 +37,6 @@ module.exports = (options ={}, ctx) => ({
     path.resolve(__dirname, 'enhanceAppFile.js')
   ],
 
-  globalUIComponents: 'LineBg'
+  globalUIComponents: 'DLine'
 
 })
