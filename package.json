@@ -1,0 +1,20 @@
+{
+  "name": "vuepress-plugin-linebg",
+  "version": "1.0.1",
+  "description": "vuepress-theme-plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vuepress",
+    "theme",
+    "background"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laobg/vuepress-plugin-linebg.git"
+  },
+  "author": "wst <stwangcq@163.com>",
+  "license": "ISC"
+}
