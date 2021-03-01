@@ -12,6 +12,8 @@ export default {
     }
   },
   mounted () {
+    if(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i.test(navigator.userAgent)) return;
+
     let winWidth, winHeight, u, s = [], oCanvas = document.getElementById("DLine"),
       zIndex = this.zIndex,
       opacity = this.opacity,
@@ -47,18 +49,20 @@ export default {
             let m = i.y - n.y;
             let  l = o * o + m * m;
             if(l < n.max ) {
-              n === move && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m)
+              // 吸引点
+              n === move && l >= n.max / 2 && (i.x -= .03 * o, i.y -= .03 * m);
+              let t = (n.max - l) / n.max;
+              ctx.beginPath();
+              ctx.lineWidth = t / 2;
+              ctx.strokeStyle = "rgba(" + color + "," + (t + .2) + ")";
+              ctx.moveTo(i.x, i.y);
+              ctx.lineTo(n.x, n.y);
+              ctx.closePath();
+              ctx.stroke();
             }
-            let t = (n.max - l) / n.max;
-            ctx.beginPath();
-            ctx.lineWidth = t / 2;
-            ctx.strokeStyle = "rgba(" + color + "," + (t + .2) + ")";
-            ctx.moveTo(i.x, i.y);
-            ctx.lineTo(n.x, n.y);
-            ctx.stroke();
           }
         }
-      }),
+      });
         animate(dwawLine)
     }
     oCanvas.style.cssText = "z-index:" + zIndex + ";opacity:" + opacity;
@@ -74,6 +78,7 @@ export default {
       move.y = null;
     };
       // 随机产生线条
+    
     for (let f = 0; count > f; f++) {
       let x = Math.random() * winWidth,
         y = Math.random() * winHeight,
